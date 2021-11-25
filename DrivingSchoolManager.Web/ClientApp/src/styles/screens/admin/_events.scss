@@ -1,0 +1,84 @@
+@import "../../helpers/helpers-dir";
+
+.admin-events {
+  @include maxContentWidth;
+  padding-top: 30px;
+
+  &__container {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__event-container {
+    @include horizontalFlex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .events__event {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    width: 70%;
+  }
+
+  &__event {
+    margin-bottom: 20px;
+    @include horizontalFlex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 15px;
+  }
+
+  &__type {
+    display: inline-block;
+    font-size: 12px;
+    background: $main;
+    padding: 2px 10px;
+    border-radius: 20px;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__data-icon {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  &__data {
+    font-size: 15px;
+    vertical-align: middle;
+  }
+
+  &__button {
+    padding: 5px 0;
+    width: 100px;
+    margin: 5px 0;
+    display: block;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &--blue {
+      background: $main;
+    }
+
+    &--red {
+      background: $red;
+    }
+
+    &--green {
+      background: $green;
+    }
+  }
+}

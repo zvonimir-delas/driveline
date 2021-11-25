@@ -1,0 +1,11 @@
+@import "../../helpers/helpers-dir";
+
+.admin-groups {
+  @include maxContentWidth;
+  padding-top: 30px;
+
+  &__group {
+    padding: 5px 15px;
+    border-radius: 14px;
+  }
+}

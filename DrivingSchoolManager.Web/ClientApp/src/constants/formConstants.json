@@ -1,0 +1,19 @@
+{
+  "placeholder": {
+    "email": "user@email.com",
+    "password": "••••••••••••",
+    "eventName": "Regulations #1"
+  },
+  "errorMessage": {
+    "required": "Field is required",
+    "email": "Email is invalid",
+    "number": "Not a number",
+    "time": "Field must be of type time",
+    "min": "Minimum characters: ",
+    "max": "Maximum characters: ",
+    "dateMin": "Can't set date before: ",
+    "dateMax": "Can't set date after: ",
+    "timeMin": "Can't set time before: ",
+    "timeMax": "Can't set time after: "
+  }
+}

@@ -1,0 +1,197 @@
+@import "../helpers/helpers-dir";
+
+.modal {
+  @include fixedCenter;
+  width: 500px;
+  z-index: 97;
+  background: $white;
+  padding: 30px 20px 20px 20px;
+  border-radius: 14px;
+  max-height: 635px;
+  overflow-y: auto;
+
+  section {
+    border-radius: 14px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__close {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  &__form {
+    .form__label {
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .form__field {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .form__input,
+    .form__select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      font-size: 18px;
+      width: 100%;
+      height: 35px;
+      padding: 8px;
+      display: block;
+      border: 1px solid $secondary;
+      border-radius: 4px;
+      color: $secondary;
+    }
+
+    .form__error {
+      font-size: 12px;
+      color: red;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+
+  &__signature-pad {
+    width: 100%;
+    height: 150px;
+    border: 1px solid $secondary;
+    border-radius: 14px;
+    margin-top: 20px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .modal__button {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 18px;
+      padding: 8px 0;
+      width: 100%;
+      background: $main;
+      border-radius: 4px;
+      color: $white;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .modal__button--grey {
+      background: $grey;
+      color: $secondary;
+    }
+
+    .modal__button--red {
+      background: $red;
+    }
+
+    .modal__button--blue {
+      background: $main;
+    }
+
+    .modal__button--green {
+      background: $green;
+    }
+
+    .modal__button--half-width {
+      width: 48%;
+    }
+  }
+
+  &__submit,
+  .form__button {
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 8px 0;
+    width: 100%;
+    background: $main;
+    border-radius: 4px;
+    color: $white;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  &__user {
+    @include horizontalFlex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+
+    .user__image {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+    }
+
+    .user__fullname {
+      font-size: 17px;
+    }
+
+    .user__data-container {
+      margin: 4px 0 0 0;
+    }
+
+    .user__action {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+
+  &__rating {
+    margin-top: 15px;
+
+    .rating__label {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+    }
+
+    div {
+      @include horizontalFlex;
+      margin-top: 5px;
+      justify-content: space-around;
+    }
+
+    span {
+      margin: 0 5px;
+    }
+  }
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+  border-radius: 14px;
+}
+
+.background-overlay {
+  width: 100%;
+  height: 100%;
+  background: $secondary-transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 96;
+}
+
+@include breakpoint(null, $mobile-max) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0%;
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../helpers/helpers-dir";
+
+.students {
+  @include maxContentWidth;
+  padding-top: 40px;
+
+  &__list {
+    @include horizontalFlex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  &__student {
+    margin: 0 20px 40px 20px;
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 14px;
+  }
+
+  &__fullname {
+    font-size: 20px;
+  }
+
+  &__data-icon {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
+
+  &__data {
+    display: inline;
+    font-size: 15px;
+    vertical-align: middle;
+    color: $secondary;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 4px 0;
+    margin-top: 4px;
+    color: $white;
+    background: $main;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

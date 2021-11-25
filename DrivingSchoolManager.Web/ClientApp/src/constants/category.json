@@ -1,0 +1,104 @@
+{
+  "am": {
+    "value": "AM",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "a1": {
+    "value": "A1",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "a2": {
+    "value": "A2",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "a": {
+    "value": "A",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "b": {
+    "value": "B",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "be": {
+    "value": "BE",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "c1": {
+    "value": "C1",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "c1e": {
+    "value": "C1E",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "c": {
+    "value": "C",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "ce": {
+    "value": "CE",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "d1": {
+    "value": "D1",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "d1e": {
+    "value": "D1E",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "d": {
+    "value": "D",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "de": {
+    "value": "DE",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "f": {
+    "value": "F",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "g": {
+    "value": "G",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  },
+  "h": {
+    "value": "H",
+    "drivingLessons": 20,
+    "regulationsLessons": 30,
+    "firstAidLessons": 9
+  }
+}

@@ -1,0 +1,140 @@
+@import "../../helpers/_helpers-dir.scss";
+@import "../../common/events";
+@import "../../common/user-info";
+
+.profile {
+  @include maxContentWidth;
+  padding-top: 40px;
+
+  &__info-events-container {
+    @include horizontalFlex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  &__progress {
+    margin-top: 30px;
+
+    .progress__container {
+      @include horizontalFlex;
+    }
+
+    .progress__bar-container {
+      width: 100%;
+      margin-right: 30px;
+    }
+
+    .progress__lessons {
+      font-size: 12px;
+      margin-left: 3px;
+    }
+
+    .progress__bar {
+      width: 100%;
+      height: 10px;
+      background: $grey;
+      border-radius: 15px;
+      margin-top: 3px;
+
+      &--filled {
+        width: 50%;
+        background: $main;
+      }
+    }
+  }
+
+  .map {
+    margin-top: 50px;
+  }
+}
+
+@include breakpoint(null, $tablet-max) {
+  .profile {
+    &__info {
+      .info__image {
+        width: 175px;
+        height: 175px;
+      }
+
+      .info__fullname {
+        font-size: 25px;
+      }
+    }
+
+    &__events {
+      .events__event {
+        width: 150px;
+        height: 150px;
+      }
+
+      .events__title {
+        font-size: 20px;
+      }
+
+      .events__icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .events__result {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@include breakpoint(null, 975px) {
+  .profile {
+    &__info {
+      width: 100%;
+      padding-bottom: 30px;
+    }
+
+    &__events {
+      width: 100%;
+
+      .section__seperator {
+        margin: 50px 0;
+      }
+    }
+  }
+}
+
+@include breakpoint(null, 575px) {
+  .profile {
+    &__events {
+      .events__list {
+        flex-direction: column;
+      }
+
+      .events__event {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint(null, $mobile-max) {
+  .profile {
+    &__info {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+@include breakpoint(null, $mobile-med) {
+  .profile {
+    &__progress {
+      .progress__bar-container {
+        margin: 0 0 20px 0;
+      }
+
+      .progress__container {
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+}

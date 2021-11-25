@@ -1,0 +1,19 @@
+@import "../../helpers/helpers-dir";
+
+.events {
+  @include maxContentWidth;
+  padding-top: 40px;
+
+  &__timespan {
+    font-size: 17px;
+    display: inline-block;
+    margin: 0 10px 8px 15px;
+  }
+
+  &__date {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+}

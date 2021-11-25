@@ -1,0 +1,38 @@
+@import "../helpers/helpers-dir";
+
+.pagination {
+  @include horizontalFlex;
+  justify-content: center;
+  padding: 5px;
+  list-style-type: none;
+
+  &__page {
+    font-size: 20px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    color: $secondary;
+  }
+
+  &__page--active {
+    color: $main;
+  }
+
+  &__action {
+    background: $main;
+    color: $white;
+    padding: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 7px;
+  }
+
+  &__action--disabled {
+    background: $grey;
+    color: $secondary;
+  }
+
+  &__break {
+    cursor: pointer;
+  }
+}

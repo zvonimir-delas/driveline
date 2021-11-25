@@ -1,0 +1,50 @@
+@import "../helpers/helpers-dir";
+
+.selector {
+  padding: 5px 10px;
+  border: 1px solid $secondary;
+  border-radius: 4px;
+  margin-bottom: 10px;
+
+  &__list {
+    max-height: 200px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+  }
+
+  &__image {
+    width: 30px;
+    height: 30px;
+    object-fit: center;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  &__user {
+    margin-bottom: 10px;
+    @include horizontalFlex;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &--highlighted {
+      color: $main;
+    }
+  }
+
+  &__group {
+    padding: 2px 0;
+    margin-bottom: 2px;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &--highlighted {
+      color: $main;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../helpers/helpers-dir.scss";
+
+.driving-sessions {
+    width: 100%;
+
+    &__list {
+        margin-top: 10px;
+    }
+
+    &__driving-session {
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        background: $main;
+        border-radius: 14px;
+        color: $white;
+        cursor: pointer;
+
+        &--selected {
+            background: $main;
+        }
+    }
+
+    &__number {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    &__date {
+        font-size: 16px;
+    }
+}

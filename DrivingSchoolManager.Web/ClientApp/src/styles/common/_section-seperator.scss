@@ -1,0 +1,39 @@
+@import "../helpers/helpers-dir";
+
+.seperator {
+  @include horizontalFlex;
+
+  &__title {
+    margin-right: 10px;
+    font-size: 18px;
+    color: $secondary;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background: $secondary;
+  }
+
+  &__button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    white-space: nowrap;
+    font-size: 16px;
+    background: $main;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: $white;
+    cursor: pointer;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    .seperator__title {
+      margin: 0 0 0 10px;
+    }
+  }
+}

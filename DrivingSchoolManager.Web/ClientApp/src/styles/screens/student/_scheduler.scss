@@ -1,0 +1,80 @@
+@import "../../helpers/helpers-dir";
+
+.profile {
+  &__schedule {
+    margin-top: 30px;
+
+    .schedule__group {
+      @include horizontalFlex;
+      align-items: flex-start;
+      margin-bottom: 40px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .schedule__appointments {
+      @include horizontalFlex;
+      flex-wrap: wrap;
+      margin-left: 10px;
+    }
+
+    .schedule__appointment {
+      font-size: 25px;
+      padding: 15px 25px;
+      background: $main;
+      border-radius: 10px;
+      color: $white;
+      margin: 0 5px 10px 5px;
+      cursor: pointer;
+
+      &--taken {
+        background: $dark-grey;
+        color: $secondary;
+      }
+    }
+
+    .schedule__remove-appointment {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+    }
+
+    .schedule__day {
+      margin-top: 17px;
+      display: inline-block;
+      min-width: 130px;
+      font-weight: normal;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-align: right;
+
+      &--highlighted {
+        color: $main;
+      }
+    }
+  }
+}
+
+@include breakpoint(null, 975px) {
+  .profile {
+    &__schedule {
+      .schedule__group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .schedule__appointments {
+        margin: 0;
+        justify-content: center;
+      }
+
+      .schedule__day {
+        margin: 0 0 10px 0;
+        min-width: auto;
+        text-align: left;
+      }
+    }
+  }
+}

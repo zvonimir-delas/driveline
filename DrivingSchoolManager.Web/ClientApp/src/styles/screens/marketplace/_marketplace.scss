@@ -1,0 +1,270 @@
+@import "../../helpers/helpers-dir";
+
+.marketplace {
+  overflow-x: hidden;
+
+  .marketplace__landing {
+    background: url("../../../assets/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    .landing__overlay {
+      @include overlay($main, 0.4);
+    }
+
+    .vimeo-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .landing__video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .landing__content {
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      transform: translate(0%, -50%);
+
+      .content__title {
+        margin-bottom: 10px;
+        font-size: 80px;
+        width: 400px;
+        font-weight: bold;
+        color: $white;
+      }
+
+      .content__search {
+        width: 645px;
+        @include horizontalFlex;
+        position: relative;
+
+        .search__settings-icon {
+          width: 30px;
+          height: 30px;
+          margin-left: 8px;
+          cursor: pointer;
+          transition: transform 250ms ease-in-out;
+        }
+
+        .search__settings-icon--rotated {
+          transform: rotate(90deg);
+        }
+
+        .search__input {
+          width: 600px;
+          height: 50px;
+          padding: 0 40px 0 20px;
+          font-size: 17px;
+          background: #f7f3f3;
+          color: $secondary;
+        }
+
+        .search__icon {
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          top: 50%;
+          right: 50px;
+          transform: translateY(-55%);
+          cursor: pointer;
+        }
+      }
+
+      @include breakpoint(null, $tablet-med) {
+        .content__title {
+          width: 300px;
+          height: auto;
+        }
+
+        .content__search {
+          width: 340px;
+
+          .search__input {
+            width: 300px;
+            height: 40px;
+          }
+        }
+      }
+
+      @include breakpoint(null, $mobile-med) {
+        .content__title {
+          width: 250px;
+        }
+
+        .content__search {
+          width: 290px;
+
+          .search__input {
+            width: 250px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+
+  .marketplace__driving-schools {
+    @include maxContentWidth;
+    margin: auto;
+    transition: all 250ms ease-in-out;
+    padding-top: 30px;
+
+    .driving-schools__filters {
+      margin: 0 auto 30px auto;
+
+      @include breakpoint(null, $tablet-med) {
+        max-width: 340px;
+      }
+
+      .filters__form {
+        @include horizontalFlex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .form__field {
+          position: relative;
+          margin: 17px 10px 0 0;
+        }
+        .field__label {
+          font-size: 14px;
+        }
+
+        .form__input,
+        .form__select {
+          margin-top: 3px;
+          display: block;
+          padding: 0 10px;
+          height: 29px;
+          font-size: 15px;
+          border: 1px solid $secondary;
+          border-radius: 4px;
+          background: $grey;
+        }
+
+        .form__error {
+          color: red;
+          font-size: 12px;
+          font-weight: bold;
+          position: absolute;
+          bottom: -15px;
+          right: 0;
+        }
+      }
+
+      .form__submit-button {
+        margin-top: 15px;
+        font-size: 15px;
+        padding: 5px 10px;
+        background: $main;
+        color: $white;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+
+    .driving-schools__list {
+      @include horizontalFlex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      min-height: 100vh;
+
+      .list__driving-school {
+        margin: 15px 10px;
+        border: 2px solid lightgray;
+        padding: 35px;
+
+        .driving-school__image {
+          width: 600px;
+          height: 310px;
+          object-fit: center;
+          border-radius: 8px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+
+        .driving-school__caption {
+          @include horizontalFlex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-top: 15px;
+
+          .caption__info {
+            .info__name {
+              color: $secondary;
+              font-size: 30px;
+              font-weight: 300;
+            }
+
+            .info__location {
+              margin-top: 5px;
+
+              .location__icon {
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 2px;
+              }
+
+              .location__text {
+                color: #545454;
+                font-size: 17px;
+              }
+            }
+
+            .info__email {
+              margin-top: 5px;
+
+              .email__icon {
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-right: 2px;
+              }
+
+              .email__text {
+                color: #545454;
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
+      @include breakpoint(null, $tablet-med) {
+        .list__driving-school {
+          .driving-school__image {
+            width: 325px;
+          }
+        }
+      }
+
+      @include breakpoint(null, $tablet-min) {
+        .list__driving-school {
+          padding: 15px;
+
+          .driving-school__image {
+            width: 225px;
+          }
+
+          .driving-school__caption {
+            max-width: 225px;
+          }
+        }
+      }
+    }
+  }
+}

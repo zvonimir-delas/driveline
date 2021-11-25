@@ -1,0 +1,42 @@
+@import "../helpers/helpers-dir.scss";
+
+.crud-table,
+.crud-table__header,
+.crud-table__cell {
+  border: 1px solid $secondary;
+  border-collapse: collapse;
+}
+
+.crud-table {
+  width: 100%;
+  margin-top: 30px;
+  overflow-x: auto;
+
+  &__cell {
+    font-size: 17px;
+    padding: 5px;
+  }
+
+  &__cell--centered {
+    text-align: center;
+  }
+
+  &__user-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__action {
+    font-size: 17px;
+    padding: 3px 5px;
+    margin: 0 3px;
+    background: $main;
+    color: $white;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  &__action--red {
+    background: $red;
+  }
+}

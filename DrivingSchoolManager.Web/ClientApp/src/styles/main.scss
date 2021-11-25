@@ -1,0 +1,23 @@
+@import "./helpers/helpers-dir";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;;
+  background: none;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+@include breakpoint(null, $tablet-med) {
+  main {
+    padding-bottom: 100px;
+  }
+}

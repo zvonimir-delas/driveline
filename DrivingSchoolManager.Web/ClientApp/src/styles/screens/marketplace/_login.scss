@@ -1,0 +1,79 @@
+@import "../../helpers/helpers-dir";
+
+.login {
+  width: 100%;
+  height: 100%;
+  background: url("../../../assets/images/background.jpg");
+  background-size: cover;
+  background-position: fixed;
+  position: absolute;
+  top: 0;
+
+  .login__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: gray;
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  .login__form {
+    @include absoluteCenter;
+    z-index: 1;
+
+    .form__field {
+      width: 400px;
+      position: relative;
+      margin: 15px 0;
+    }
+    .form__label {
+      margin-left: 20px;
+      color: $white;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .form__input {
+      width: 100%;
+      height: 45px;
+      margin-top: 10px;
+      padding: 0 25px;
+      display: flex;
+      flex-direction: column;
+      font-size: 17px;
+      color: $secondary;
+      background: $white;
+    }
+
+    .form__error {
+      color: red;
+      font-size: 15px;
+      font-weight: bold;
+      position: absolute;
+      bottom: -20px;
+      right: 20px;
+    }
+
+    .form__submit {
+      width: 50%;
+      height: 45px;
+      margin-top: 20px;
+      background: $main;
+      color: $white;
+      font-size: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+      @include minimalShadow;
+      left: 50%;
+      transform: translate(-50%, 0);
+      position: absolute;
+    }
+  }
+}
+
+@include breakpoint(null, $mobile-max) {
+  .login__form {
+    width: 290px;
+  }
+}

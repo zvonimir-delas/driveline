@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="driving-school-manager\yarn.lock" />
+    <None Remove="ClientApp\src\styles\screens\admin\_users.scss" />
+    <None Remove="ClientApp\src\styles\common\_modal.scss" />
+    <None Remove="ClientApp\src\components\screens\admin\users\AdminUsers.jsx" />
+    <None Remove="ClientApp\src\components\screens\admin\users\UserList.jsx" />
+    <None Remove="ClientApp\src\components\screens\admin\users\UserForm.jsx" />
+    <None Remove="ClientApp\src\components\screens\admin\users\User.jsx" />
+    <None Remove="ClientApp\src\components\layouts\AdminLayout.jsx" />
+    <None Remove="ClientApp\src\assets\icons\exit.svg" />
+    <None Remove="ClientApp\src\assets\icons\clock.svg" />
+    <None Remove="ClientApp\src\services\users.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClientApp\src\App.css" />
+    <None Include="wwwroot\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FirebaseAdmin" Version="1.16.0" />
+    <PackageReference Include="IdentityServer4" Version="3.1.0" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Microsoft.WindowsAzure.ConfigurationManager" Version="3.2.3" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DrivingSchoolManager.Data\DrivingSchoolManager.Data.csproj" />
+    <ProjectReference Include="..\DrivingSchoolManager.Domain\DrivingSchoolManager.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="ClientApp\src\constants\role.json" />
+  </ItemGroup>
+</Project>

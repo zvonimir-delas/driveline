@@ -1,0 +1,18 @@
+@import "../helpers/helpers-dir";
+
+.rating {
+  .rating__number {
+    width: 100%;
+    display: inline-block;
+    color: $secondary;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    bottom: 5px;
+  }
+}
